@@ -1,0 +1,104 @@
+[
+  // Àü»ç=1, ÅÊÄ¿=2, ¹ý»ç=3, Àú°Ý=4, ¾Ï»ì=5, ¼­Æý=6
+  // ºû=1, ¾îµÒ=2, ¹°=3, ºÒ=4, ´ëÁö=5, ¹Ù¶÷=6, ±â°è=7
+  {
+    "id": 1,
+    "name": "¹«¸í±â»ç",
+    "rank": 2,
+    "classType": 1,
+    "synergyType": 1,
+
+    "atk": 200,
+    "hp": 5000,
+    "def": 40,
+    "defpen": 40,
+    "atkspeed": 1,
+    "critdmg": 200,
+    "critprob": 5
+
+  },
+
+  {
+    "id": 2,
+    "name": "¶óºñ¾Æ",
+    "rank": 4,
+    "classType": 5,
+    "synergyType": 6,
+
+    "atk": 300,
+    "hp": 5000,
+    "def": 40,
+    "defpen": 50,
+    "atkspeed": 1,
+    "critdmg": 200,
+    "critprob": 8
+
+  },
+
+  {
+    "id": 3,
+    "name": "Çï¸®¿À",
+    "rank": 3,
+    "classType": 1,
+    "synergyType": 4,
+
+    "atk": 200,
+    "hp": 5000,
+    "def": 40,
+    "defpen": 40,
+    "atkspeed": 1,
+    "critdmg": 200,
+    "critprob": 5
+
+  },
+
+  {
+    "id": 4,
+    "name": "À¯ÀÌ½º",
+    "rank": 1,
+    "classType": 6,
+    "synergyType": 3,
+
+    "atk": 125,
+    "hp": 5000,
+    "def": 16,
+    "defpen": 16,
+    "atkspeed": 1,
+    "critdmg": 200,
+    "critprob": 5
+
+  },
+
+  {
+    "id": 5,
+    "name": "Æç½¼",
+    "rank": 1,
+    "classType": 3,
+    "synergyType": 5,
+
+    "atk": 187,
+    "hp": 3500,
+    "def": 16,
+    "defpen": 40,
+    "atkspeed": 1,
+    "critdmg": 200,
+    "critprob": 7
+
+  },
+  {
+    "id": 6,
+    "name": "Àè½¼",
+    "rank": 1,
+    "classType": 1,
+    "synergyType": 5,
+
+    "atk": 156,
+    "hp": 5889,
+    "def": 24,
+    "defpen": 24,
+    "atkspeed": 1,
+    "critdmg": 200,
+    "critprob": 5
+
+  }
+]
