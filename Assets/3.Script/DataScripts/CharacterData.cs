@@ -33,6 +33,7 @@ public class CharacterData
     public int rank; // º° ¼öÄ¡
     public CharacterClass classType;
     public CharacterSynergy synergyType;
+    public string path_Image;
 
     public int atk;
     public int hp;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// 
 public class CharacterSelector : MonoBehaviour
 {
     [System.Serializable]
@@ -17,10 +18,14 @@ public class CharacterSelector : MonoBehaviour
 
     private void Awake()
     {
+        int characterCount = GameManager.instance.list_CharacterData.Count;
+        for(int i=0; i<characterCount; i++)
+        {
+
+        }
         for (int i = 0; i < selects.Length; i++)
         {
-            GameManager.instance.grid.tiles[i].selector
-                = selects[i];
+            GameManager.instance.grid.tiles[i].selector = selects[i];
         }
     }
 
