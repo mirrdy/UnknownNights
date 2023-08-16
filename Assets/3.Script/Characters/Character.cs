@@ -32,6 +32,7 @@ public class Character : MonoBehaviour
         
     }
 
+
     public void Spawn(Transform tr)
     {
         transform.localPosition = tr.localPosition;

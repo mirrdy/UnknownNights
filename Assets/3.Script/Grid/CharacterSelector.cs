@@ -18,7 +18,7 @@ public class CharacterSelector : MonoBehaviour
 
     private void Awake()
     {
-        int characterCount = GameManager.instance.list_CharacterData.Count;
+        int characterCount = GameManager.instance.list_Character.Count;
         for(int i=0; i<characterCount; i++)
         {
 

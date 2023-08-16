@@ -16,6 +16,10 @@ public class LoadingManager : MonoBehaviour
     // 로드 후 비활성화할 오브젝트들
     public GameObject beforeLoadingObject;
 
+
+    // 데이터 할당 전 캐릭터 프리팹
+    [SerializeField] private Character prefab_Character;
+
     // 로드 진행 슬라이더 바
     public Slider slider_Loading;
 
@@ -48,6 +52,7 @@ public class LoadingManager : MonoBehaviour
                 characterData.rank = (int)characterDatas[i]["rank"];
                 characterData.classType = (CharacterClass)(int)characterDatas[i]["classType"];
                 characterData.synergyType = (CharacterSynergy)(int)characterDatas[i]["synergyType"];
+                characterData.imageName = (string)characterDatas[i]["imageName"];
                 characterData.atk = (int)characterDatas[i]["atk"];
                 characterData.hp = (int)characterDatas[i]["hp"];
                 characterData.def = (int)characterDatas[i]["def"];
@@ -63,8 +68,12 @@ public class LoadingManager : MonoBehaviour
             }
 
             list.Add(characterData);
-        }
-        GameManager.instance.list_CharacterData = list;
+            Character character = Instantiate(prefab_Character, transform);
+            character.gameObject.SetActive(false);
+            character.characterData = characterData;
+
+            GameManager.instance.list_Character.Add(character);
+        }   
         
         float startTime = Time.time;
 

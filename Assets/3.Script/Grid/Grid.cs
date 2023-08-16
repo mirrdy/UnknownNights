@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,6 @@ public class Grid : MonoBehaviour
     public int mousePos = 0; // 선택한 타일(1~9), 타일이 아니면 0
 
     public Character selectedCharacter; // 캐릭터 참조
-
 
     public delegate void Delegate_Reset(); // 모두 내리기 델리게이트
     public Delegate_Reset delegate_Reset;
@@ -39,11 +39,32 @@ public class Grid : MonoBehaviour
         //드래그 : 캐릭터 끌기
         if (Input.GetMouseButton(0))
         {
-            PickADoll();
+            PickCharacter();
             //Debug.Log("Drag");
         }
     }
 
+    public void Spawn(Character character)
+    {
+        int deployCount = Array.FindAll(tiles, ((tile) => tile.character != null)).Length;
+        if(deployCount >= GameManager.instance.maxUnitCount)
+        {
+            Debug.Log("유닛 배치 수 초과");
+            return;
+        }
+        for(int i=0; i<tiles.Length; i++)
+        {
+            if(tiles[i].character == null)
+            {
+                tiles[i].character = character;
+                tiles[i].image.sprite = Resources.Load<Sprite>("Images/" + character.characterData.imageName);
+                
+                break;
+            }
+        }
+        
+
+    }
     // 캐릭터 배치
     public void Spawn(Character character, CharacterSelector.Select selector)
     {
@@ -154,7 +175,7 @@ public class Grid : MonoBehaviour
         //타일 밖이면 리턴
         if (num < 1)
             return;
-        //모든 타일에 활성화된 이미지를 off이미지로 변경(체인된 딜리게이트)
+        //모든 타일에 활성화된 이미지를 off이미지로 변경(체인된 델리게이트)
         delegate_Reset();
 
         // 기존에 선택되어있는 캐릭터가 null이 아니고 지금 선택한 타일과 다른곳에 있으면
@@ -172,7 +193,7 @@ public class Grid : MonoBehaviour
 
 
     // 캐릭터 선택 이동
-    public void PickADoll()
+    public void PickCharacter()
     {
         // 기존에 끌고있는 캐릭터가 있으면 리턴
         if (pickedCharacter != 0)

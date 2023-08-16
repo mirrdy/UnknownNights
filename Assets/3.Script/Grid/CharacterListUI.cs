@@ -8,13 +8,14 @@ public class CharacterListUI : MonoBehaviour
     private CharacterSelectSlot[] CharacterSlots;
     private void Awake()
     {
-        int characterCount = GameManager.instance.list_CharacterData.Count;
+        int characterCount = GameManager.instance.list_Character.Count;
+
         CharacterSlots = new CharacterSelectSlot[characterCount];
 
         for(int i=0; i<characterCount; i++)
         {
             Instantiate(prefab_CharacterSlot, transform).TryGetComponent(out CharacterSlots[i]);
-            CharacterSlots[i].SetSlot(GameManager.instance.list_CharacterData[i]);
+            CharacterSlots[i].SetSlot(GameManager.instance.list_Character[i]);
         }
 
     }

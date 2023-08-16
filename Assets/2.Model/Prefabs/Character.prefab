@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7131022787850745520}
   - component: {fileID: 7131022787850745523}
+  - component: {fileID: 349469829563400824}
   m_Layer: 0
-  m_Name: Blue
+  m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,14 +73,47 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0.15520048, b: 1, a: 1}
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &349469829563400824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131022787850745522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b318297c734d3434e9ecd8970038661d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  id: 0
+  characterData:
+    id: 0
+    name: 
+    rank: 0
+    classType: 0
+    synergyType: 0
+    imageName: 
+    atk: 0
+    hp: 0
+    def: 0
+    defpen: 0
+    atkspeed: 0
+    critdmg: 0
+    critprob: 0
+  pos: 0
+  selector:
+    gridPos: 0
+    btn: {fileID: 0}
+    image: {fileID: 0}
